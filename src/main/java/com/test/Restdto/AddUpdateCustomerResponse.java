@@ -3,6 +3,7 @@ package com.test.Restdto;
 public class AddUpdateCustomerResponse {
 
 	long CustomerId;
+
 	public long getCustomerId() {
 		return CustomerId;
 	}
@@ -13,7 +14,7 @@ public class AddUpdateCustomerResponse {
 
 	Status status;
 
-public Status getStatus() {
+	public Status getStatus() {
 		return status;
 	}
 
@@ -21,9 +22,9 @@ public Status getStatus() {
 		this.status = status;
 	}
 
-public AddUpdateCustomerResponse(Long CustomerId, Status status) {
-	    this.CustomerId = CustomerId;
-	    this.status = status;
-	  }
-	
+	public AddUpdateCustomerResponse(Long CustomerId, Status status) {
+		this.CustomerId = CustomerId;
+		this.status = status;
+	}
+
 }

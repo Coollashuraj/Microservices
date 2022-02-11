@@ -9,6 +9,7 @@ public class AddUpdateCustomerRequest {
 	private String lastName;
 
 	private Date dateOfBirth;
+	
 	private Status status;
 
 	public Status getStatus() {

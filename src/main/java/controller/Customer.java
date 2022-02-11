@@ -1,4 +1,5 @@
 package controller;
+
 import java.sql.Date;
 
 import javax.persistence.Column;
@@ -11,72 +12,60 @@ import javax.persistence.Id;
 import com.test.Restdto.Status;
 
 public class Customer {
-	 @Id
-	  @GeneratedValue(strategy = GenerationType.AUTO)
-	  private long customerId;
+	@Id
+	@GeneratedValue(strategy = GenerationType.AUTO)
+	private long customerId;
 
-	  public long getCustomerId() {
+	public long getCustomerId() {
 		return customerId;
 	}
 
-
-
 	@Column(name = "first_name")
-	  private String firstName;
+	private String firstName;
 
-	  @Column(name = "last_name")
-	  private String lastName;
+	@Column(name = "last_name")
+	private String lastName;
 
-	  @Column(name = "date_of_birth")
-	  private Date dateOfBirth;
+	@Column(name = "date_of_birth")
+	private Date dateOfBirth;
 
+	@Enumerated(EnumType.STRING)
+	@Column(name = "status")
+	private Status Status;
 
-	  @Enumerated(EnumType.STRING)
-	  @Column(name = "status")
-	  private Status Status;
+	public void setCustomerId(long customerId) {
+		this.customerId = customerId;
+	}
 
+	public String getFirstName() {
+		return firstName;
+	}
 
-		public void setCustomerId(long customerId) {
-			this.customerId = customerId;
-		}
+	public void setFirstName(String firstName) {
+		this.firstName = firstName;
+	}
 
+	public String getLastName() {
+		return lastName;
+	}
 
-		public String getFirstName() {
-			return firstName;
-		}
+	public void setLastName(String lastName) {
+		this.lastName = lastName;
+	}
 
+	public Date getDateOfBirth() {
+		return dateOfBirth;
+	}
 
-		public void setFirstName(String firstName) {
-			this.firstName = firstName;
-		}
+	public void setDateOfBirth(Date dateOfBirth) {
+		this.dateOfBirth = dateOfBirth;
+	}
 
+	public Status getStatus() {
+		return Status;
+	}
 
-		public String getLastName() {
-			return lastName;
-		}
-
-
-		public void setLastName(String lastName) {
-			this.lastName = lastName;
-		}
-
-
-		public Date getDateOfBirth() {
-			return dateOfBirth;
-		}
-
-
-		public void setDateOfBirth(Date dateOfBirth) {
-			this.dateOfBirth = dateOfBirth;
-		}
-
-
-		public Status getStatus() {
-			return Status;
-		}
-
-
-		public void setStatus(Status status) {
-			Status = status;
-		}
+	public void setStatus(Status status) {
+		Status = status;
+	}
 }
